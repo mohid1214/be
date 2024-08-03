@@ -10,6 +10,7 @@ const UserSchema = mongoose.Schema(
     year : String,
     email : String,
     pass : String,
+    profilePicture: String,
   },
   {
     collection: "userinfo"
