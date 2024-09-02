@@ -1,17 +1,24 @@
-const { Collection } = require("mongodb");
 const mongoose = require("mongoose");
 
 const UserSchema = mongoose.Schema(
   {
-    name: String,
-    email: String,
-    phone: String,
-    password: String,
-    pic : String
+    firstName : String,
+    lastName : String,
+    country : String,
+    date : String,
+    month : String,
+    year : String,
+    email : String,
+    pass : String,
+    profilePicture: String,
   },
   {
-    Collection:'userinfo'
+    collection: "userinfo"
   }
 );
 
-mongoose.model("userinfo",UserSchema);
+const UserModel = mongoose.model("User", UserSchema);
+
+module.exports = UserModel
+
+
